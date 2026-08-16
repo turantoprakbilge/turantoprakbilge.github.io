@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-16.014 -31 408.16 212.46684" width="100%" height="100%">
-  <!-- Official Technical University of Munich (TUM) Monogram -->
-  <path fill="#0065BD" d="m 140.54052,-31 v 173.32822 h 44.72985 V -31 H 392.146 V 181.46685 H 353.00738 V 8.138629 H 308.2775 V 181.46685 H 269.13887 V 8.138629 H 224.40902 V 181.46685 H 101.4019 V 8.138629 H 62.26327 V 181.46685 H 23.12462 V 8.138629 H -16.014 V -31 Z" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Official Technical University of Munich (TUM) Blue Badge & White Monogram -->
+  <rect width="100" height="100" rx="16" fill="#0065BD"/>
+  <g transform="translate(11, 28) scale(0.19)" fill="#FFFFFF">
+    <path d="m 140.54052,-31 v 173.32822 h 44.72985 V -31 H 392.146 V 181.46685 H 353.00738 V 8.138629 H 308.2775 V 181.46685 H 269.13887 V 8.138629 H 224.40902 V 181.46685 H 101.4019 V 8.138629 H 62.26327 V 181.46685 H 23.12462 V 8.138629 H -16.014 V -31 Z"/>
+  </g>
 </svg>
