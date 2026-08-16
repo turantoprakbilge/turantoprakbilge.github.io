@@ -1,11 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
-  <rect width="100" height="100" rx="20" fill="#000000"/>
-  <!-- DeepLearning.AI Red/Orange Hexagon/Nodes -->
-  <circle cx="35" cy="35" r="14" fill="#FF4B4B"/>
-  <circle cx="65" cy="35" r="14" fill="#FF6B4B"/>
-  <circle cx="50" cy="68" r="14" fill="#FF8C42"/>
-  <!-- Connecting Synapses -->
-  <line x1="35" y1="35" x2="65" y2="35" stroke="#ffffff" stroke-width="4" opacity="0.8"/>
-  <line x1="35" y1="35" x2="50" y2="68" stroke="#ffffff" stroke-width="4" opacity="0.8"/>
-  <line x1="65" y1="35" x2="50" y2="68" stroke="#ffffff" stroke-width="4" opacity="0.8"/>
+  <!-- Official DeepLearning.AI Isometric Brand Mark -->
+  <g transform="translate(0, 0)">
+    <!-- Top Rhombus Face -->
+    <path d="M 50 14 L 80 31.3 L 50 48.6 L 20 31.3 Z" fill="#FF7361"/>
+    <!-- Left Rhombus Face -->
+    <path d="M 20 35 L 50 52.3 L 50 86 L 20 68.7 Z" fill="#FF4757"/>
+    <!-- Right Rhombus Face -->
+    <path d="M 50 52.3 L 80 35 L 80 68.7 L 50 86 Z" fill="#D63031"/>
+    
+    <!-- Isometric Center Accent Rings -->
+    <circle cx="50" cy="31.3" r="4.5" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="35" cy="56" r="4" fill="#FFFFFF" opacity="0.85"/>
+    <circle cx="65" cy="56" r="4" fill="#FFFFFF" opacity="0.85"/>
+  </g>
 </svg>
