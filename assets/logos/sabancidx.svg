@@ -1,13 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
-  <!-- Sabancı Blue Circle -->
-  <circle cx="60" cy="60" r="54" fill="#003580"/>
-  <!-- Stylized SA Emblem -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <rect width="100" height="100" rx="20" fill="#002D72"/>
+  <!-- Sabancı Iconic Circular Arc Emblem -->
   <g fill="#ffffff">
-    <!-- Outer Arc Rings -->
-    <path d="M 60 20 C 37.9 20 20 37.9 20 60 C 20 82.1 37.9 100 60 100 C 76.5 100 90.7 89.9 96.6 75.5 L 83.5 75.5 C 78.8 83.8 69.9 89.5 60 89.5 C 43.7 89.5 30.5 76.3 30.5 60 C 30.5 43.7 43.7 30.5 60 30.5 C 72.8 30.5 83.7 38.6 87.7 50 L 98.8 50 C 94.2 32.5 78.7 20 60 20 Z"/>
-    <!-- Inner S shape & Dx indicator -->
-    <text x="60" y="66" font-family="'Inter', 'Arial Black', sans-serif" font-weight="900" font-size="28" text-anchor="middle" fill="#ffffff">SA</text>
+    <path d="M 50 18 C 32.3 18 18 32.3 18 50 C 18 67.7 32.3 82 50 82 C 63.2 82 74.5 73.9 79.2 62.4 L 68.7 62.4 C 65 69 58 73.6 50 73.6 C 37 73.6 26.4 63 26.4 50 C 26.4 37 37 26.4 50 26.4 C 60.2 26.4 69 32.9 72.2 42 L 81 42 C 77.4 28 65 18 50 18 Z"/>
+    <text x="49" y="55" font-family="'Inter', 'Arial Black', sans-serif" font-weight="900" font-size="18" text-anchor="middle">SA</text>
   </g>
-  <!-- Accent Tech Dot -->
-  <circle cx="92" cy="36" r="8" fill="#00d2ff"/>
+  <!-- Dx Cyan Badge -->
+  <rect x="68" y="24" width="18" height="12" rx="4" fill="#00c8ff"/>
+  <text x="77" y="33" font-family="'Inter', sans-serif" font-weight="900" font-size="7" fill="#002D72" text-anchor="middle">Dx</text>
 </svg>
