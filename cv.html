@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toprak Bilge - CV / Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --text-main: #111827;
+      --text-muted: #4b5563;
+      --accent: #0284c7;
+      --border-color: #d1d5db;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text-main);
+      background-color: #f3f4f6;
+      line-height: 1.35;
+      font-size: 9.5pt;
+      padding: 2rem 1rem;
+    }
+    .cv-page {
+      max-width: 820px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 2.2rem 2.4rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      border-radius: 8px;
+    }
+    .cv-header {
+      margin-bottom: 0.8rem;
+    }
+    .cv-name {
+      font-size: 20pt;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.02em;
+    }
+    .cv-title {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #334155;
+      margin-top: 2px;
+      margin-bottom: 5px;
+    }
+    .cv-contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 8.8pt;
+      color: #475569;
+      margin-bottom: 8px;
+    }
+    .cv-contact-bar a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+    .cv-contact-bar a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    .cv-summary {
+      font-size: 8.9pt;
+      color: #334155;
+      text-align: justify;
+      margin-bottom: 0.9rem;
+      line-height: 1.38;
+    }
+    .section-heading {
+      font-size: 9.8pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #0f172a;
+      border-bottom: 1.5px solid #0f172a;
+      padding-bottom: 2px;
+      margin-top: 0.8rem;
+      margin-bottom: 0.55rem;
+    }
+    .exp-item {
+      margin-bottom: 0.65rem;
+    }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 9pt;
+      margin-bottom: 2px;
+    }
+    .exp-role-company {
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .exp-meta {
+      font-size: 8.4pt;
+      color: #64748b;
+      font-style: italic;
+    }
+    .exp-bullets {
+      list-style-type: disc;
+      padding-left: 1.15rem;
+      font-size: 8.7pt;
+      color: #334155;
+    }
+    .exp-bullets li {
+      margin-bottom: 2px;
+      line-height: 1.32;
+    }
+    .edu-item {
+      margin-bottom: 0.35rem;
+    }
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 8.8pt;
+    }
+    .edu-title {
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .edu-meta {
+      font-size: 8.4pt;
+      color: #64748b;
+      font-style: italic;
+    }
+    .edu-sub {
+      font-size: 8.4pt;
+      color: #475569;
+    }
+    .skills-row {
+      font-size: 8.7pt;
+      margin-bottom: 3px;
+      color: #334155;
+    }
+    .skills-label {
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .two-col-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 1.5rem;
+      margin-top: 0.3rem;
+    }
+    .action-bar {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+      z-index: 1000;
+    }
+    .action-btn {
+      background: #0f172a;
+      color: #ffffff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-size: 9pt;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .action-btn:hover {
+      background: #0284c7;
+      transform: translateY(-2px);
+    }
+
+    @media print {
+      body {
+        background: transparent;
+        padding: 0;
+      }
+      .cv-page {
+        max-width: 100%;
+        padding: 0;
+        box-shadow: none;
+        border-radius: 0;
+      }
+      .action-bar {
+        display: none !important;
+      }
+      a {
+        text-decoration: none !important;
+        color: inherit !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Action Bar -->
+  <div class="action-bar">
+    <button onclick="window.print()" class="action-btn">
+      <i class="fa-solid fa-file-pdf"></i> Print / Save PDF
+    </button>
+    <a href="index.html" class="action-btn" style="background: #0284c7;">
+      <i class="fa-solid fa-globe"></i> Interactive Portfolio
+    </a>
+  </div>
+
+  <div class="cv-page">
+    <!-- Header -->
+    <header class="cv-header">
+      <h1 class="cv-name">Toprak Bilge</h1>
+      <div class="cv-title">BI & Analytics Engineer</div>
+      <div class="cv-contact-bar">
+        <span><a href="mailto:turantoprakbilge@gmail.com"><i class="fa-regular fa-envelope"></i> turantoprakbilge@gmail.com</a></span>
+        <span>·</span>
+        <span><a href="tel:+4915752841577"><i class="fa-solid fa-phone"></i> +49 157 5284 1577</a></span>
+        <span>·</span>
+        <span><i class="fa-solid fa-location-dot"></i> Munich, Germany</span>
+        <span>·</span>
+        <span><a href="https://turantoprakbilge.github.io" target="_blank"><i class="fa-solid fa-globe"></i> turantoprakbilge.github.io</a></span>
+        <span>·</span>
+        <span><a href="https://github.com/turantoprakbilge" target="_blank"><i class="fa-brands fa-github"></i> github.com/turantoprakbilge</a></span>
+        <span>·</span>
+        <span><a href="https://www.linkedin.com/in/turan-toprak-bilge-909b46175/" target="_blank"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/ToprakBilge</a></span>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <p class="cv-summary">
+      BI & Analytics Engineer with a data platform engineering foundation (PySpark, Databricks, Delta Lake, Azure Synapse) and a growing specialization in applied AI — from fine-tuning LLMs in a production marketing context to Databricks' Generative AI Engineering track and daily use of AI-assisted engineering tools (Claude Code, GitHub Copilot, Codex). Continuously upskilling through hands-on certification (Databricks Academy, DeepLearning.AI) rather than passive learning, backed by an MSc in Management & Technology from TU Munich (thesis on LLMs in recommendation engines, with Amazon).
+    </p>
+
+    <!-- Professional Experience -->
+    <section>
+      <h2 class="section-heading">Professional Experience</h2>
+      
+      <!-- Allianz SE -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role-company">Allianz SE, BI & Analytics Engineer (Full Time)</span>
+          <span class="exp-meta">06/2024 – present · Munich, Germany</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Own the financial data warehouse for the central operations team, supporting regulatory reporting across five EU countries (EIOPA, BaFin, and national regulators).</li>
+          <li>Design and maintain dimensional data models over 10B+ transactional records, feeding Power BI reporting used by 500+ business users.</li>
+          <li>Build and optimize PySpark transformation pipelines on Databricks (Delta Lake) and Azure Synapse to produce governed, report-ready datasets from SAP FI-GL sources.</li>
+          <li>Diagnosed and resolved 100+ data-processing incidents, improving pipeline reliability and reporting accuracy.</li>
+          <li>Translated business and operational requirements into technical solutions, including enhanced monitoring over data-processing pipelines and defining data-quality (DQ) frameworks around them.</li>
+          <li>Lead data governance, error-handling, and data-quality initiatives across the reporting pipeline.</li>
+          <li>Act as Data Steward for local and global master data, ensuring consistency across SAP and Azure Synapse systems.</li>
+          <li>Deliver technical training and documentation to drive tool adoption among internal stakeholders.</li>
+        </ul>
+      </div>
+
+      <!-- Amazon -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role-company">AMAZON, Data Analyst (Working Student)</span>
+          <span class="exp-meta">06/2023 – 06/2024 · Munich, Germany</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Fine-tuned an internal LLM to power automated marketing-campaign generation.</li>
+          <li>Automated weekly engagement reporting, reducing manual effort and improving accuracy.</li>
+          <li>Ran customer segmentation and A/B tests across 20+ campaigns reaching 3M+ customers.</li>
+          <li>Organized and led an international Generative AI workshop at the London HQ.</li>
+        </ul>
+      </div>
+
+      <!-- Siemens -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role-company">SIEMENS, Data Scientist (Working Student)</span>
+          <span class="exp-meta">06/2022 – 06/2023 · Munich, Germany</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Built C-level Power BI dashboards supporting multiple manufacturing use cases.</li>
+          <li>Deployed NLP document-classification models (Flask, REST API, Docker).</li>
+          <li>Built optimization models (PuLP, Gurobi) for resource allocation and operational efficiency.</li>
+        </ul>
+      </div>
+
+      <!-- SabancıDx -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role-company">SabancıDx, Data Scientist (Full Time)</span>
+          <span class="exp-meta">04/2021 – 08/2021 · Istanbul, Turkey</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Built AI-based optimization models that cut client energy consumption by 20%+.</li>
+          <li>Delivered ML-driven quality-improvement projects using R, Python (NumPy, Pandas, Matplotlib), and SQL.</li>
+        </ul>
+      </div>
+
+      <!-- Bayer AG -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role-company">Bayer AG, Data Scientist (Senior-Year Academic Project)</span>
+          <span class="exp-meta">09/2020 – 09/2021 · remote / Denver, USA</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Optimized production scheduling and network flow with linear programming and simulation, reducing cycle time by 35% and cost by 15%.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <h2 class="section-heading">Education</h2>
+      
+      <div class="edu-item">
+        <div class="edu-header">
+          <span class="edu-title">MSc Management and Technology — Technical University of Munich (TUM)</span>
+          <span class="edu-meta">10/2021 – 02/2024 · Munich</span>
+        </div>
+        <div class="edu-sub"><em>Thesis: Potential of LLMs in B2C Recommendation Engines — in collaboration with Amazon · GPA: 1.5 (German system)</em></div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-header">
+          <span class="edu-title">BSc Software Engineering (Double Degree) — Bilkent University · GPA: 3.56 / 4.0</span>
+          <span class="edu-meta">01/2019 – 01/2021 · Ankara</span>
+        </div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-header">
+          <span class="edu-title">BSc Industrial Engineering — Bilkent University · GPA: 3.32 / 4.0</span>
+          <span class="edu-meta">01/2017 – 01/2021 · Ankara</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <h2 class="section-heading">Skills</h2>
+      <div class="skills-row"><span class="skills-label">Languages & Query:</span> Python, SQL, R</div>
+      <div class="skills-row"><span class="skills-label">Data Engineering & Big Data:</span> PySpark, Databricks, Delta Lake, ETL/ELT, Spark</div>
+      <div class="skills-row"><span class="skills-label">Cloud & Data Platforms:</span> Azure (Synapse), AWS, SAP FI-GL</div>
+      <div class="skills-row"><span class="skills-label">Data Modeling & BI:</span> Dimensional modeling, Power BI (DAX), Tableau, master-data / semantic modeling</div>
+      <div class="skills-row"><span class="skills-label">ML & AI:</span> scikit-learn, PyTorch, LLMs, RAG, MCP</div>
+      <div class="skills-row"><span class="skills-label">Tools & Workflow:</span> Git, Docker, REST API, Jira, Excel</div>
+      <div class="skills-row"><span class="skills-label">AI Coding Tools:</span> Claude Code, GitHub Copilot, Codex, Google Antigravity</div>
+    </section>
+
+    <!-- Certificates & Languages Grid -->
+    <div class="two-col-grid">
+      <section>
+        <h2 class="section-heading">Certificates</h2>
+        <ul class="exp-bullets">
+          <li>Generative AI with LLMs — DeepLearning.AI</li>
+          <li>Neural Networks and Deep Learning — DeepLearning.AI</li>
+          <li>Supervised Learning with scikit-learn — DataCamp</li>
+          <li>Generative AI Engineering with Databricks — Databricks Academy</li>
+          <li>Data Engineering with Databricks — Databricks Academy</li>
+          <li>Apache Spark Programming with Databricks — Databricks Academy</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="section-heading">Languages</h2>
+        <ul class="exp-bullets">
+          <li><strong>English</strong> — C1 (Professional)</li>
+          <li><strong>German</strong> — B1 (Intermediate)</li>
+          <li><strong>Turkish</strong> — Native</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+</body>
+</html>
