@@ -186,89 +186,164 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 9. Dynamic Ambient Background Logo Cross-Fade & Location Cycler
-  const brandLogos = [
-    // Top Enterprise Brands & Universities
-    'assets/logos/allianz.svg?v=6',
-    'assets/logos/amazon.svg?v=6',
-    'assets/logos/tum.svg?v=6',
-    'assets/logos/siemens.svg?v=6',
-    'assets/logos/bayer.svg?v=6',
-    'assets/logos/sabancidx.svg?v=6',
-    'assets/logos/bilkent.svg?v=6',
-    
-    // Core Engineering & Applied AI Stack
-    'assets/logos/python.svg',
-    'assets/logos/spark.svg',
-    'assets/logos/databricks.svg',
-    'assets/logos/azure.svg',
-    'assets/logos/powerbi.svg',
-    'assets/logos/docker.svg',
-    'assets/logos/pytorch.svg',
-    'assets/logos/deltalake.svg',
-    'assets/logos/git.svg',
-    'assets/logos/openai.svg',
-    'assets/logos/postgresql.svg',
-    'assets/logos/fastapi.svg',
-    'assets/logos/aws.svg'
-  ];
+  // 9. Ultra-Smooth 60FPS Ambient Background Logo Constellation (Canvas Engine)
+  const canvas = document.getElementById('ambientLogoCanvas');
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let width = 0;
+    let height = 0;
+    let dpr = window.devicePixelRatio || 1;
 
-  // Dynamic screen coordinates where logos spawn and drift
-  const screenPositions = [
-    { top: '12%', left: '3%', right: 'auto' },
-    { top: '22%', right: '4%', left: 'auto' },
-    { top: '35%', left: '4%', right: 'auto' },
-    { top: '48%', right: '12%', left: 'auto' },
-    { top: '60%', left: '3%', right: 'auto' },
-    { top: '72%', right: '4%', left: 'auto' },
-    { top: '85%', left: '4.5%', right: 'auto' },
-    { top: '16%', right: '14%', left: 'auto' },
-    { top: '52%', left: '10%', right: 'auto' },
-    { top: '88%', right: '5%', left: 'auto' }
-  ];
+    function resizeCanvas() {
+      dpr = window.devicePixelRatio || 1;
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+      canvas.style.width = width + 'px';
+      canvas.style.height = height + 'px';
+      ctx.scale(dpr, dpr);
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
 
-  const ambientPods = document.querySelectorAll('.ambient-badge');
-  if (ambientPods.length > 0) {
-    ambientPods.forEach((pod, podIndex) => {
-      let currentLogoIdx = (podIndex * 3) % brandLogos.length;
-      let currentPosIdx = (podIndex * 2) % screenPositions.length;
-      const img = pod.querySelector('img');
+    const logoSources = [
+      'assets/logos/allianz.svg?v=7',
+      'assets/logos/amazon.svg?v=7',
+      'assets/logos/tum.svg?v=7',
+      'assets/logos/siemens.svg?v=7',
+      'assets/logos/bayer.svg?v=7',
+      'assets/logos/sabancidx.svg?v=7',
+      'assets/logos/bilkent.svg?v=7',
+      'assets/logos/python.svg?v=7',
+      'assets/logos/spark.svg?v=7',
+      'assets/logos/databricks.svg?v=7',
+      'assets/logos/azure.svg?v=7',
+      'assets/logos/powerbi.svg?v=7',
+      'assets/logos/docker.svg?v=7',
+      'assets/logos/pytorch.svg?v=7',
+      'assets/logos/deltalake.svg?v=7',
+      'assets/logos/git.svg?v=7',
+      'assets/logos/openai.svg?v=7',
+      'assets/logos/postgresql.svg?v=7',
+      'assets/logos/fastapi.svg?v=7',
+      'assets/logos/aws.svg?v=7'
+    ];
 
-      // Set initial logo & position
-      if (img) img.src = brandLogos[currentLogoIdx];
-      const initialPos = screenPositions[currentPosIdx];
-      pod.style.top = initialPos.top;
-      pod.style.left = initialPos.left;
-      pod.style.right = initialPos.right;
-
-      // Cycle position & logo with staggered delays
-      const cycleInterval = 4600;
-      const initialDelay = 800 + (podIndex * 850);
-
-      setTimeout(() => {
-        setInterval(() => {
-          // 1. Smooth Fade-Out
-          pod.classList.add('badge-fading');
-
-          // 2. While completely hidden, change location & swap logo
-          setTimeout(() => {
-            currentLogoIdx = (currentLogoIdx + 1) % brandLogos.length;
-            currentPosIdx = (currentPosIdx + 3) % screenPositions.length;
-            
-            const nextPos = screenPositions[currentPosIdx];
-            pod.style.top = nextPos.top;
-            pod.style.left = nextPos.left;
-            pod.style.right = nextPos.right;
-
-            if (img) img.src = brandLogos[currentLogoIdx];
-
-            // 3. Smooth Fade-In at the new location
-            setTimeout(() => {
-              pod.classList.remove('badge-fading');
-            }, 80);
-          }, 600);
-        }, cycleInterval);
-      }, initialDelay);
+    // Preload SVG Image objects into memory
+    const loadedImages = [];
+    logoSources.forEach(src => {
+      const img = new Image();
+      img.src = src;
+      loadedImages.push(img);
     });
+
+    const isMobile = window.innerWidth < 768;
+    const particleCount = isMobile ? 4 : 7;
+    const particles = [];
+
+    function spawnParticle(initial = false) {
+      const isLeft = Math.random() > 0.5;
+      const xMargin = isMobile ? width * 0.02 : width * 0.035;
+      const xSpan = isMobile ? width * 0.15 : width * 0.14;
+      const x = isLeft
+        ? Math.random() * xSpan + xMargin
+        : width - Math.random() * xSpan - (isMobile ? 65 : 85);
+
+      const y = Math.random() * (height * 0.82) + height * 0.08;
+      const size = isMobile ? 56 : 72;
+      const targetAlpha = isMobile ? 0.22 : 0.30;
+
+      return {
+        x: x,
+        y: y,
+        vx: (Math.random() - 0.5) * 0.22,
+        vy: -0.15 - Math.random() * 0.2, // gentle natural upward buoyancy
+        size: size,
+        imgIdx: Math.floor(Math.random() * loadedImages.length),
+        alpha: initial ? Math.random() * targetAlpha : 0,
+        targetAlpha: targetAlpha,
+        state: initial ? 'active' : 'fadeIn',
+        life: initial ? Math.floor(Math.random() * 300) + 150 : 0,
+        maxLife: Math.floor(Math.random() * 400) + 380,
+        rot: (Math.random() - 0.5) * 0.06
+      };
+    }
+
+    for (let i = 0; i < particleCount; i++) {
+      particles.push(spawnParticle(true));
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+
+      const isLight = document.body.classList.contains('light-theme');
+      const tileBg = isLight ? 'rgba(0, 0, 0, 0.04)' : 'rgba(255, 255, 255, 0.055)';
+      const tileBorder = isLight ? 'rgba(0, 0, 0, 0.1)' : 'rgba(255, 255, 255, 0.15)';
+
+      particles.forEach((p, idx) => {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.life++;
+
+        // Smooth state machine
+        if (p.state === 'fadeIn') {
+          p.alpha += 0.006;
+          if (p.alpha >= p.targetAlpha) {
+            p.alpha = p.targetAlpha;
+            p.state = 'active';
+          }
+        } else if (p.state === 'active') {
+          if (p.life >= p.maxLife || p.y < -p.size || p.y > height + p.size) {
+            p.state = 'fadeOut';
+          }
+        } else if (p.state === 'fadeOut') {
+          p.alpha -= 0.006;
+          if (p.alpha <= 0) {
+            p.alpha = 0;
+            particles[idx] = spawnParticle(false);
+          }
+        }
+
+        if (p.alpha > 0.005) {
+          ctx.save();
+          ctx.globalAlpha = p.alpha;
+          ctx.translate(p.x + p.size / 2, p.y + p.size / 2);
+          ctx.rotate(p.rot);
+
+          const w = p.size;
+          const h = p.size;
+          const halfW = w / 2;
+          const halfH = h / 2;
+          const radius = isMobile ? 14 : 18;
+
+          // Draw Frosted Glass Capsule
+          ctx.fillStyle = tileBg;
+          ctx.strokeStyle = tileBorder;
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          if (ctx.roundRect) {
+            ctx.roundRect(-halfW, -halfH, w, h, radius);
+          } else {
+            ctx.rect(-halfW, -halfH, w, h);
+          }
+          ctx.fill();
+          ctx.stroke();
+
+          // Draw Authentic Vector Logo
+          const img = loadedImages[p.imgIdx];
+          if (img && img.complete && img.naturalWidth > 0) {
+            const pad = isMobile ? 10 : 13;
+            ctx.drawImage(img, -halfW + pad, -halfH + pad, w - pad * 2, h - pad * 2);
+          }
+
+          ctx.restore();
+        }
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
   }
 });
