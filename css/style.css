@@ -137,7 +137,7 @@ ul {
 }
 
 /* ==========================================================================
-   Dynamic Ambient Floating Brand Badges (Clear, Vibrant, Smooth Floating)
+   Dynamic Ambient Floating Brand Badges (Smooth Cross-Fade & Location Cycler)
    ========================================================================== */
 .ambient-logo-bg {
   position: fixed;
@@ -153,25 +153,32 @@ ul {
   top: var(--top, 50%);
   left: var(--left, auto);
   right: var(--right, auto);
-  width: var(--size, 75px);
+  width: var(--size, 90px);
   padding: 8px 12px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.12);
-  opacity: 0.22;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  opacity: 0.28;
   transform: translate3d(0, 0, 0);
   animation: ambientBadgeFloat var(--duration, 10s) ease-in-out infinite alternate;
   animation-delay: var(--delay, 0s);
   will-change: transform, opacity;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 3px;
   pointer-events: none;
   user-select: none;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1), transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), filter 0.45s ease;
+}
+.ambient-badge.badge-fading {
+  opacity: 0.01 !important;
+  transform: scale(0.82) translateY(12px) !important;
+  filter: blur(3px);
 }
 .ambient-badge img {
   width: 100%;
@@ -180,31 +187,44 @@ ul {
   display: block;
   object-fit: contain;
 }
+.badge-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  opacity: 0.85;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
 @keyframes ambientBadgeFloat {
   0% {
-    opacity: 0.14;
+    opacity: 0.20;
     transform: translateY(0px) rotate(0deg) scale(0.96);
   }
   50% {
-    opacity: 0.28;
-    transform: translateY(-22px) rotate(3deg) scale(1.04);
-    box-shadow: 0 16px 36px rgba(0, 242, 254, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    opacity: 0.35;
+    transform: translateY(-22px) rotate(3.5deg) scale(1.04);
+    box-shadow: 0 16px 36px rgba(0, 242, 254, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   }
   100% {
-    opacity: 0.16;
+    opacity: 0.22;
     transform: translateY(14px) rotate(-2.5deg) scale(0.98);
   }
 }
 body.light-theme .ambient-badge {
-  background: rgba(0, 0, 0, 0.035);
-  border-color: rgba(0, 0, 0, 0.09);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-  opacity: 0.2;
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  opacity: 0.25;
+}
+body.light-theme .badge-label {
+  color: var(--text-primary);
+  text-shadow: none;
 }
 @media (max-width: 992px) {
   .ambient-badge {
-    width: calc(var(--size, 75px) * 0.75);
-    opacity: 0.16;
+    width: calc(var(--size, 90px) * 0.75);
+    opacity: 0.2;
   }
   .ambient-badge:nth-child(even) {
     display: none;

@@ -185,4 +185,50 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // 9. Dynamic Ambient Background Logo Cross-Fade & Location Cycler
+  const brandLogos = [
+    { src: 'assets/logos/allianz.svg?v=6', name: 'Allianz SE' },
+    { src: 'assets/logos/amazon.svg?v=6', name: 'Amazon' },
+    { src: 'assets/logos/tum.svg?v=6', name: 'TU Munich' },
+    { src: 'assets/logos/siemens.svg?v=6', name: 'Siemens' },
+    { src: 'assets/logos/bayer.svg?v=6', name: 'Bayer AG' },
+    { src: 'assets/logos/sabancidx.svg?v=6', name: 'SabancıDx' },
+    { src: 'assets/logos/databricks.svg?v=6', name: 'Databricks' },
+    { src: 'assets/logos/bilkent.svg?v=6', name: 'Bilkent Univ.' }
+  ];
+
+  const ambientPods = document.querySelectorAll('.ambient-badge');
+  if (ambientPods.length > 0) {
+    ambientPods.forEach((pod, podIndex) => {
+      let currentIdx = (podIndex * 2) % brandLogos.length;
+      const img = pod.querySelector('img');
+      const label = pod.querySelector('.badge-label');
+
+      // Set initial logo & label
+      if (img) img.src = brandLogos[currentIdx].src;
+      if (label) label.textContent = brandLogos[currentIdx].name;
+
+      // Cycle every 4 seconds with staggered starting delays
+      const cycleInterval = 4200;
+      const initialDelay = 1200 + (podIndex * 950);
+
+      setTimeout(() => {
+        setInterval(() => {
+          // 1. Smooth Fade-Out
+          pod.classList.add('badge-fading');
+
+          // 2. Swap Logo & Title in mid-fade
+          setTimeout(() => {
+            currentIdx = (currentIdx + 1) % brandLogos.length;
+            if (img) img.src = brandLogos[currentIdx].src;
+            if (label) label.textContent = brandLogos[currentIdx].name;
+
+            // 3. Smooth Fade-In
+            pod.classList.remove('badge-fading');
+          }, 450);
+        }, cycleInterval);
+      }, initialDelay);
+    });
+  }
 });
