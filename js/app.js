@@ -228,6 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
       'assets/logos/postgresql.svg?v=7',
       'assets/logos/fastapi.svg?v=7',
       'assets/logos/aws.svg?v=7',
+      'assets/logos/r.svg?v=7',
       'assets/logos/claude.svg?v=7',
       'assets/logos/copilot.svg?v=7',
       'assets/logos/antigravity.svg?v=7'
