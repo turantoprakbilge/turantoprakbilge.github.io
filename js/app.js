@@ -188,45 +188,70 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 9. Dynamic Ambient Background Logo Cross-Fade & Location Cycler
   const brandLogos = [
-    { src: 'assets/logos/allianz.svg?v=6', name: 'Allianz SE' },
-    { src: 'assets/logos/amazon.svg?v=6', name: 'Amazon' },
-    { src: 'assets/logos/tum.svg?v=6', name: 'TU Munich' },
-    { src: 'assets/logos/siemens.svg?v=6', name: 'Siemens' },
-    { src: 'assets/logos/bayer.svg?v=6', name: 'Bayer AG' },
-    { src: 'assets/logos/sabancidx.svg?v=6', name: 'SabancıDx' },
-    { src: 'assets/logos/databricks.svg?v=6', name: 'Databricks' },
-    { src: 'assets/logos/bilkent.svg?v=6', name: 'Bilkent Univ.' }
+    'assets/logos/allianz.svg?v=6',
+    'assets/logos/amazon.svg?v=6',
+    'assets/logos/tum.svg?v=6',
+    'assets/logos/siemens.svg?v=6',
+    'assets/logos/bayer.svg?v=6',
+    'assets/logos/sabancidx.svg?v=6',
+    'assets/logos/databricks.svg?v=6',
+    'assets/logos/bilkent.svg?v=6'
+  ];
+
+  // Dynamic screen coordinates where logos spawn and drift
+  const screenPositions = [
+    { top: '12%', left: '3%', right: 'auto' },
+    { top: '22%', right: '4%', left: 'auto' },
+    { top: '35%', left: '4%', right: 'auto' },
+    { top: '48%', right: '12%', left: 'auto' },
+    { top: '60%', left: '3%', right: 'auto' },
+    { top: '72%', right: '4%', left: 'auto' },
+    { top: '85%', left: '4.5%', right: 'auto' },
+    { top: '16%', right: '14%', left: 'auto' },
+    { top: '52%', left: '10%', right: 'auto' },
+    { top: '88%', right: '5%', left: 'auto' }
   ];
 
   const ambientPods = document.querySelectorAll('.ambient-badge');
   if (ambientPods.length > 0) {
     ambientPods.forEach((pod, podIndex) => {
-      let currentIdx = (podIndex * 2) % brandLogos.length;
+      let currentLogoIdx = (podIndex * 3) % brandLogos.length;
+      let currentPosIdx = (podIndex * 2) % screenPositions.length;
       const img = pod.querySelector('img');
-      const label = pod.querySelector('.badge-label');
 
-      // Set initial logo & label
-      if (img) img.src = brandLogos[currentIdx].src;
-      if (label) label.textContent = brandLogos[currentIdx].name;
+      // Set initial logo & position
+      if (img) img.src = brandLogos[currentLogoIdx];
+      const initialPos = screenPositions[currentPosIdx];
+      pod.style.top = initialPos.top;
+      pod.style.left = initialPos.left;
+      pod.style.right = initialPos.right;
 
-      // Cycle every 4 seconds with staggered starting delays
-      const cycleInterval = 4200;
-      const initialDelay = 1200 + (podIndex * 950);
+      // Cycle position & logo with staggered delays
+      const cycleInterval = 4600;
+      const initialDelay = 800 + (podIndex * 850);
 
       setTimeout(() => {
         setInterval(() => {
           // 1. Smooth Fade-Out
           pod.classList.add('badge-fading');
 
-          // 2. Swap Logo & Title in mid-fade
+          // 2. While completely hidden, change location & swap logo
           setTimeout(() => {
-            currentIdx = (currentIdx + 1) % brandLogos.length;
-            if (img) img.src = brandLogos[currentIdx].src;
-            if (label) label.textContent = brandLogos[currentIdx].name;
+            currentLogoIdx = (currentLogoIdx + 1) % brandLogos.length;
+            currentPosIdx = (currentPosIdx + 3) % screenPositions.length;
+            
+            const nextPos = screenPositions[currentPosIdx];
+            pod.style.top = nextPos.top;
+            pod.style.left = nextPos.left;
+            pod.style.right = nextPos.right;
 
-            // 3. Smooth Fade-In
-            pod.classList.remove('badge-fading');
-          }, 450);
+            if (img) img.src = brandLogos[currentLogoIdx];
+
+            // 3. Smooth Fade-In at the new location
+            setTimeout(() => {
+              pod.classList.remove('badge-fading');
+            }, 80);
+          }, 600);
         }, cycleInterval);
       }, initialDelay);
     });
