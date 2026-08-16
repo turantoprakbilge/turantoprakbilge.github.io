@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toprak Bilge | BI & Analytics Engineer | Applied AI & Data Platforms</title>
+  <meta name="description" content="Toprak Bilge - BI & Analytics Engineer specializing in Data Platform Engineering (Databricks, PySpark, Azure Synapse) and Applied AI (LLMs, RAG). Based in Munich, Germany.">
+  <meta name="keywords" content="Toprak Bilge, BI Engineer, Data Platform Engineer, Analytics Engineer, Databricks, PySpark, Applied AI, LLM, Azure Synapse, Munich">
+  <meta name="author" content="Toprak Bilge">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:title" content="Toprak Bilge | BI & Analytics Engineer">
+  <meta property="og:description" content="BI & Analytics Engineer with a data platform engineering foundation and applied AI specialization.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark-theme">
+  <!-- Background Glow Orbs -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>TB<span class="logo-slash">/</span><span class="logo-bracket">&gt;</span>
+        <span class="logo-text">Toprak Bilge</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link"><i class="fa-solid fa-user-tie"></i> About</a>
+        <a href="#experience" class="nav-link"><i class="fa-solid fa-briefcase"></i> Experience</a>
+        <a href="#skills" class="nav-link"><i class="fa-solid fa-code"></i> Skills</a>
+        <a href="#education" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Education</a>
+        <a href="#certifications" class="nav-link"><i class="fa-solid fa-certificate"></i> Certifications</a>
+        <a href="#contact" class="nav-link"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="btn-icon" aria-label="Toggle Theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="#contact" class="btn btn-sm btn-primary">Hire Me</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="section hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="status-dot"></span> Available for Data & AI Roles · Munich, Germany
+          </div>
+          
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Toprak Bilge</span>
+          </h1>
+          
+          <p class="hero-subtitle">
+            <strong>BI & Analytics Engineer</strong> | Data Platform & Applied AI Specialist
+          </p>
+
+          <p class="hero-desc">
+            Bridging robust data platform engineering (<strong>PySpark, Databricks, Delta Lake, Azure Synapse</strong>) with cutting-edge applied AI (<strong>LLM Fine-Tuning, RAG, GenAI</strong>). Backed by an MSc from <strong>TU Munich</strong> (Thesis with <strong>Amazon</strong>) and proven impact at <strong>Allianz SE</strong>.
+          </p>
+
+          <!-- Quick Actions -->
+          <div class="hero-cta-group">
+            <a href="mailto:turantoprakbilge@gmail.com" class="btn btn-primary">
+              <i class="fa-solid fa-envelope"></i> Get In Touch
+            </a>
+            <a href="https://linkedin.com/in/ToprakBilge" target="_blank" rel="noopener noreferrer" class="btn btn-glass">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <button id="quickCopyEmail" class="btn btn-glass" title="Copy email address to clipboard">
+              <i class="fa-solid fa-copy"></i> Copy Email
+            </button>
+            <button onclick="window.print()" class="btn btn-glass" title="Print or Save CV as PDF">
+              <i class="fa-solid fa-file-arrow-down"></i> Print / Save CV
+            </button>
+          </div>
+
+          <!-- Quick Contacts Metadata Bar -->
+          <div class="hero-meta-bar">
+            <div class="meta-item">
+              <i class="fa-solid fa-location-dot"></i> Munich, Germany
+            </div>
+            <div class="meta-item">
+              <i class="fa-solid fa-envelope"></i> turantoprakbilge@gmail.com
+            </div>
+            <div class="meta-item">
+              <i class="fa-solid fa-phone"></i> +49 157 5284 1577
+            </div>
+            <div class="meta-item">
+              <i class="fa-brands fa-linkedin"></i> linkedin.com/in/ToprakBilge
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual / Floating Tech Stack Card -->
+        <div class="hero-visual">
+          <div class="hero-card-glow"></div>
+          <div class="hero-card glass-panel">
+            <div class="hero-card-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="terminal-title">toprak_profile.py</div>
+            </div>
+            <div class="hero-code-block">
+              <pre><code><span class="code-keyword">class</span> <span class="code-class">DataAndAIEngineer</span>:
+    <span class="code-keyword">def</span> <span class="code-func">__init__</span>(self):
+        self.name = <span class="code-str">"Toprak Bilge"</span>
+        self.role = <span class="code-str">"BI & Analytics Engineer"</span>
+        self.location = <span class="code-str">"Munich, DE"</span>
+        self.education = <span class="code-str">"TUM MSc (1.5 GPA)"</span>
+        
+    <span class="code-keyword">def</span> <span class="code-func">core_capabilities</span>(self):
+        <span class="code-keyword">return</span> [
+            <span class="code-str">"10B+ Records Dimensional Modeling"</span>,
+            <span class="code-str">"PySpark & Databricks Delta Lake"</span>,
+            <span class="code-str">"LLM Fine-Tuning & RAG Pipelines"</span>,
+            <span class="code-str">"Regulatory DQ & Data Governance"</span>
+        ]</code></pre>
+            </div>
+            <div class="hero-card-tags">
+              <span class="tag-pill">Databricks</span>
+              <span class="tag-pill">PySpark</span>
+              <span class="tag-pill">Azure Synapse</span>
+              <span class="tag-pill">LLMs / RAG</span>
+              <span class="tag-pill">Power BI (DAX)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Impact Metrics Ribbon -->
+      <div class="metrics-ribbon">
+        <div class="container">
+          <div class="metrics-grid">
+            <div class="metric-card glass-panel">
+              <div class="metric-number"><span class="counter" data-target="10">0</span>B+</div>
+              <div class="metric-label">Transactional Records Modeled</div>
+              <div class="metric-sub">at Allianz SE (EIOPA & BaFin)</div>
+            </div>
+            <div class="metric-card glass-panel">
+              <div class="metric-number"><span class="counter" data-target="500">0</span>+</div>
+              <div class="metric-label">Active Power BI Users</div>
+              <div class="metric-sub">Enterprise Decision Makers</div>
+            </div>
+            <div class="metric-card glass-panel">
+              <div class="metric-number"><span class="counter" data-target="3">0</span>M+</div>
+              <div class="metric-label">Campaign Reach & LLM Gen</div>
+              <div class="metric-sub">at Amazon Working Student</div>
+            </div>
+            <div class="metric-card glass-panel">
+              <div class="metric-number"><span class="counter" data-target="100">0</span>+</div>
+              <div class="metric-label">Pipeline DQ Fixes</div>
+              <div class="metric-sub">High Reliability Engineering</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">Summary</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">Driving enterprise decision-making with scalable big data platforms and applied AI solutions.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass-panel">
+            <div class="about-icon"><i class="fa-solid fa-database"></i></div>
+            <h3>Data Platform Engineering</h3>
+            <p>
+              Strong engineering foundation in <strong>PySpark, Databricks Delta Lake, and Azure Synapse</strong>. Extensive track record in owning financial data warehouses, designing dimensional models over 10B+ transactional records, and optimizing mission-critical ETL/ELT pipelines.
+            </p>
+          </div>
+
+          <div class="about-card glass-panel">
+            <div class="about-icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>Applied AI & Generative AI</h3>
+            <p>
+              Practical experience fine-tuning LLMs in production (Amazon marketing automation), running RAG pipelines, and conducting Master's thesis research with Amazon on LLMs for B2C recommendation systems at Technical University of Munich.
+            </p>
+          </div>
+
+          <div class="about-card glass-panel">
+            <div class="about-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>Governance & Data Quality</h3>
+            <p>
+              Acted as Data Steward for SAP FI-GL and Azure Synapse environments. Built robust data quality (DQ) frameworks, automated error-handling pipelines, and regulatory reporting systems for 5 EU countries under EIOPA and BaFin.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section (Interactive Timeline) -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">Career Track</span>
+          <h2 class="section-title">Professional Experience</h2>
+          <p class="section-subtitle">Proven track record in top global enterprises and fast-paced tech environments.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Item 1: Allianz -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">BI & Analytics Engineer <span class="badge-type">Full Time</span></h3>
+                  <div class="company-name"><i class="fa-solid fa-building"></i> Allianz SE</div>
+                </div>
+                <div class="timeline-date">
+                  <span class="date-badge"><i class="fa-regular fa-calendar"></i> 06/2024 – Present</span>
+                  <span class="location-badge"><i class="fa-solid fa-location-dot"></i> Munich, Germany</span>
+                </div>
+              </div>
+              <ul class="timeline-bullets">
+                <li><strong>Data Warehouse Ownership:</strong> Own the financial data warehouse for the central operations team, supporting regulatory reporting across 5 EU countries (EIOPA, BaFin, national regulators).</li>
+                <li><strong>Massive Scale Dimensional Modeling:</strong> Design and maintain dimensional data models over <strong>10B+ transactional records</strong>, feeding Power BI reporting for <strong>500+ business users</strong>.</li>
+                <li><strong>Databricks & Azure Synapse Pipelines:</strong> Build and optimize PySpark transformation pipelines on Databricks (Delta Lake) and Azure Synapse to produce governed datasets from SAP FI-GL sources.</li>
+                <li><strong>Incident Resolution & DQ:</strong> Diagnosed and resolved <strong>100+ data-processing incidents</strong>, improving pipeline reliability and reporting accuracy.</li>
+                <li><strong>Data Governance & Stewardship:</strong> Act as Data Steward for local and global master data, translating business requirements into monitored technical architectures.</li>
+                <li><strong>Stakeholder Enablement:</strong> Deliver technical training and documentation to drive adoption across internal teams.</li>
+              </ul>
+              <div class="timeline-skills">
+                <span class="tech-tag">PySpark</span>
+                <span class="tech-tag">Databricks</span>
+                <span class="tech-tag">Delta Lake</span>
+                <span class="tech-tag">Azure Synapse</span>
+                <span class="tech-tag">Power BI / DAX</span>
+                <span class="tech-tag">SAP FI-GL</span>
+                <span class="tech-tag">Data Governance</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Amazon -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Data Analyst <span class="badge-type">Working Student</span></h3>
+                  <div class="company-name"><i class="fa-brands fa-amazon"></i> Amazon</div>
+                </div>
+                <div class="timeline-date">
+                  <span class="date-badge"><i class="fa-regular fa-calendar"></i> 06/2023 – 06/2024</span>
+                  <span class="location-badge"><i class="fa-solid fa-location-dot"></i> Munich, Germany</span>
+                </div>
+              </div>
+              <ul class="timeline-bullets">
+                <li><strong>LLM Fine-Tuning:</strong> Fine-tuned an internal LLM to power automated marketing-campaign generation.</li>
+                <li><strong>Reporting Automation:</strong> Automated weekly engagement reporting, substantially reducing manual engineering effort while boosting metric accuracy.</li>
+                <li><strong>Customer Segmentation & A/B Testing:</strong> Executed customer segmentation and A/B tests across <strong>20+ campaigns reaching 3M+ customers</strong>.</li>
+                <li><strong>Generative AI Leadership:</strong> Organized and led an international Generative AI workshop at the Amazon London HQ.</li>
+              </ul>
+              <div class="timeline-skills">
+                <span class="tech-tag">LLM Fine-Tuning</span>
+                <span class="tech-tag">Generative AI</span>
+                <span class="tech-tag">A/B Testing</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">Customer Analytics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Siemens -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Data Scientist <span class="badge-type">Working Student</span></h3>
+                  <div class="company-name"><i class="fa-solid fa-microchip"></i> Siemens</div>
+                </div>
+                <div class="timeline-date">
+                  <span class="date-badge"><i class="fa-regular fa-calendar"></i> 06/2022 – 06/2023</span>
+                  <span class="location-badge"><i class="fa-solid fa-location-dot"></i> Munich, Germany</span>
+                </div>
+              </div>
+              <ul class="timeline-bullets">
+                <li><strong>Executive Dashboards:</strong> Built C-level Power BI dashboards supporting multiple manufacturing and supply chain use cases.</li>
+                <li><strong>NLP & API Deployment:</strong> Deployed NLP document-classification models into production using Flask, REST APIs, and Docker.</li>
+                <li><strong>Operations Optimization:</strong> Built mathematical optimization models (PuLP, Gurobi) for resource allocation and operational efficiency.</li>
+              </ul>
+              <div class="timeline-skills">
+                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">REST API</span>
+                <span class="tech-tag">Flask</span>
+                <span class="tech-tag">Power BI</span>
+                <span class="tech-tag">Gurobi / PuLP</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: SabancıDx -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Data Scientist <span class="badge-type">Full Time</span></h3>
+                  <div class="company-name"><i class="fa-solid fa-chart-line"></i> SabancıDx</div>
+                </div>
+                <div class="timeline-date">
+                  <span class="date-badge"><i class="fa-regular fa-calendar"></i> 04/2021 – 08/2021</span>
+                  <span class="location-badge"><i class="fa-solid fa-location-dot"></i> Istanbul, Turkey</span>
+                </div>
+              </div>
+              <ul class="timeline-bullets">
+                <li><strong>Energy AI Optimization:</strong> Built AI-based optimization models that reduced industrial client energy consumption by <strong>20%+</strong>.</li>
+                <li><strong>ML Quality Assurance:</strong> Delivered ML-driven quality-improvement systems using R, Python (NumPy, Pandas, Matplotlib), and SQL.</li>
+              </ul>
+              <div class="timeline-skills">
+                <span class="tech-tag">Machine Learning</span>
+                <span class="tech-tag">Python (NumPy/Pandas)</span>
+                <span class="tech-tag">R</span>
+                <span class="tech-tag">Energy Optimization</span>
+                <span class="tech-tag">SQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5: Bayer AG -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Data Scientist <span class="badge-type">Senior Project</span></h3>
+                  <div class="company-name"><i class="fa-solid fa-flask"></i> Bayer AG</div>
+                </div>
+                <div class="timeline-date">
+                  <span class="date-badge"><i class="fa-regular fa-calendar"></i> 09/2020 – 09/2021</span>
+                  <span class="location-badge"><i class="fa-solid fa-location-dot"></i> Remote / Denver, USA</span>
+                </div>
+              </div>
+              <ul class="timeline-bullets">
+                <li><strong>Supply Chain & Network Flow:</strong> Optimized production scheduling and network flow with linear programming and simulation.</li>
+                <li><strong>Business Impact:</strong> Reduced cycle time by <strong>35%</strong> and overall operations cost by <strong>15%</strong>.</li>
+              </ul>
+              <div class="timeline-skills">
+                <span class="tech-tag">Linear Programming</span>
+                <span class="tech-tag">Simulation</span>
+                <span class="tech-tag">Optimization</span>
+                <span class="tech-tag">Python</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section with Filterable Matrix -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">Expertise</span>
+          <h2 class="section-title">Technical Skills Matrix</h2>
+          <p class="section-subtitle">Comprehensive toolkit across big data engineering, applied AI, and analytics.</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="skills-filter-container">
+          <button class="filter-btn active" data-filter="all">All Skills</button>
+          <button class="filter-btn" data-filter="data-eng">Data Engineering</button>
+          <button class="filter-btn" data-filter="ai-ml">ML & Applied AI</button>
+          <button class="filter-btn" data-filter="cloud-bi">Cloud & BI</button>
+          <button class="filter-btn" data-filter="languages">Languages & Query</button>
+          <button class="filter-btn" data-filter="tools">Tools & Workflow</button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Data Engineering -->
+          <div class="skill-card glass-panel" data-category="data-eng">
+            <div class="skill-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <div class="skill-name">Databricks & Delta Lake</div>
+            <span class="skill-level">Advanced Platform</span>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="data-eng">
+            <div class="skill-icon"><i class="fa-solid fa-bolt"></i></div>
+            <div class="skill-name">PySpark & Apache Spark</div>
+            <span class="skill-level">Big Data Processing</span>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="data-eng">
+            <div class="skill-icon"><i class="fa-solid fa-arrows-split-up-and-left"></i></div>
+            <div class="skill-name">ETL / ELT Architecture</div>
+            <span class="skill-level">Pipeline Design</span>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="data-eng">
+            <div class="skill-icon"><i class="fa-solid fa-sitemap"></i></div>
+            <div class="skill-name">Dimensional Data Modeling</div>
+            <span class="skill-level">Star/Snowflake Schema</span>
+          </div>
+
+          <!-- ML & AI -->
+          <div class="skill-card glass-panel" data-category="ai-ml">
+            <div class="skill-icon"><i class="fa-solid fa-brain"></i></div>
+            <div class="skill-name">LLMs & Fine-Tuning</div>
+            <span class="skill-level">Applied GenAI</span>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="ai-ml">
+            <div class="skill-icon"><i class="fa-solid fa-cubes"></i></div>
+            <div class="skill-name">RAG (Retrieval-Augmented)</div>
+            <span class="skill-level">Enterprise AI</span>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="ai-ml">
+            <div class="skill-icon"><i class="fa-solid fa-network-wired"></i></div>
+            <div class="skill-name">PyTorch & scikit-learn</div>
+            <span class="skill-level">Deep Learning & ML</span>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="ai-ml">
+            <div class="skill-icon"><i class="fa-solid fa-robot"></i></div>
+            <div class="skill-name">AI Coding (Claude Code, Copilot)</div>
+            <span class="skill-level">10x Engineering</span>
+          </div>
+
+          <!-- Cloud & BI -->
+          <div class="skill-card glass-panel" data-category="cloud-bi">
+            <div class="skill-icon"><i class="fa-brands fa-microsoft"></i></div>
+            <div class="skill-name">Azure (Synapse Analytics)</div>
+            <span class="skill-level">Enterprise Cloud</span>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="cloud-bi">
+            <div class="skill-icon"><i class="fa-brands fa-aws"></i></div>
+            <div class="skill-name">AWS Cloud</div>
+            <span class="skill-level">Data Ecosystem</span>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="cloud-bi">
+            <div class="skill-icon"><i class="fa-solid fa-chart-pie"></i></div>
+            <div class="skill-name">Power BI (DAX) & Tableau</div>
+            <span class="skill-level">Executive Dashboards</span>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="cloud-bi">
+            <div class="skill-icon"><i class="fa-solid fa-building-columns"></i></div>
+            <div class="skill-name">SAP FI-GL Integration</div>
+            <span class="skill-level">Master Data & Governance</span>
+          </div>
+
+          <!-- Languages -->
+          <div class="skill-card glass-panel" data-category="languages">
+            <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+            <div class="skill-name">Python</div>
+            <span class="skill-level">Advanced / Primary</span>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="languages">
+            <div class="skill-icon"><i class="fa-solid fa-table"></i></div>
+            <div class="skill-name">SQL (Advanced Querying)</div>
+            <span class="skill-level">High Performance</span>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="languages">
+            <div class="skill-icon"><i class="fa-solid fa-square-root-variable"></i></div>
+            <div class="skill-name">R (Statistical Computing)</div>
+            <span class="skill-level">Data Science</span>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-card glass-panel" data-category="tools">
+            <div class="skill-icon"><i class="fa-brands fa-docker"></i></div>
+            <div class="skill-name">Docker & Containerization</div>
+            <span class="skill-level">Deployment</span>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="tools">
+            <div class="skill-icon"><i class="fa-brands fa-git-alt"></i></div>
+            <div class="skill-name">Git & CI/CD</div>
+            <span class="skill-level">Version Control</span>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="tools">
+            <div class="skill-icon"><i class="fa-solid fa-gears"></i></div>
+            <div class="skill-name">REST APIs & Flask</div>
+            <span class="skill-level">Backend Services</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">Academics</span>
+          <h2 class="section-title">Education & Degrees</h2>
+          <p class="section-subtitle">Rigorous training in software engineering, industrial management, and applied AI.</p>
+        </div>
+
+        <div class="education-grid">
+          <!-- TUM Master -->
+          <div class="education-card glass-panel highlight-card">
+            <div class="edu-badge"><i class="fa-solid fa-award"></i> Top German University</div>
+            <div class="edu-header">
+              <h3>Technical University of Munich (TUM)</h3>
+              <span class="edu-date">10/2021 – 02/2024 · Munich, Germany</span>
+            </div>
+            <div class="edu-degree">MSc Management and Technology</div>
+            <div class="edu-gpa"><strong>GPA: 1.5</strong> <span class="gpa-note">(German grading scale - Excellent)</span></div>
+            
+            <div class="thesis-box">
+              <div class="thesis-title"><i class="fa-solid fa-book-open"></i> Master's Thesis:</div>
+              <p class="thesis-desc">
+                <em>"Potential of LLMs in B2C Recommendation Engines"</em> — Conducted in formal collaboration with <strong>Amazon</strong>.
+              </p>
+            </div>
+          </div>
+
+          <!-- Bilkent Double Degree -->
+          <div class="education-card glass-panel">
+            <div class="edu-badge"><i class="fa-solid fa-graduation-cap"></i> Double Degree</div>
+            <div class="edu-header">
+              <h3>Bilkent University</h3>
+              <span class="edu-date">01/2017 – 01/2021 · Ankara, Turkey</span>
+            </div>
+            
+            <div class="degree-subgroup">
+              <div class="edu-degree">BSc Software Engineering (Double Degree)</div>
+              <div class="edu-gpa">GPA: <strong>3.56 / 4.0</strong> (01/2019 – 01/2021)</div>
+            </div>
+
+            <div class="degree-subgroup">
+              <div class="edu-degree">BSc Industrial Engineering</div>
+              <div class="edu-gpa">GPA: <strong>3.32 / 4.0</strong> (01/2017 – 01/2021)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications & Languages Section -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <div class="two-col-grid">
+          <!-- Certifications Column -->
+          <div>
+            <div class="section-header">
+              <span class="section-badge">Credentials</span>
+              <h2 class="section-title">Certifications</h2>
+            </div>
+
+            <div class="certs-list">
+              <div class="cert-item glass-panel">
+                <div class="cert-icon"><i class="fa-solid fa-shield-check"></i></div>
+                <div>
+                  <h4>Generative AI with LLMs</h4>
+                  <p class="cert-org">DeepLearning.AI</p>
+                </div>
+              </div>
+
+              <div class="cert-item glass-panel">
+                <div class="cert-icon"><i class="fa-solid fa-shield-check"></i></div>
+                <div>
+                  <h4>Generative AI Engineering with Databricks</h4>
+                  <p class="cert-org">Databricks Academy</p>
+                </div>
+              </div>
+
+              <div class="cert-item glass-panel">
+                <div class="cert-icon"><i class="fa-solid fa-shield-check"></i></div>
+                <div>
+                  <h4>Data Engineering with Databricks</h4>
+                  <p class="cert-org">Databricks Academy</p>
+                </div>
+              </div>
+
+              <div class="cert-item glass-panel">
+                <div class="cert-icon"><i class="fa-solid fa-shield-check"></i></div>
+                <div>
+                  <h4>Apache Spark Programming with Databricks</h4>
+                  <p class="cert-org">Databricks Academy</p>
+                </div>
+              </div>
+
+              <div class="cert-item glass-panel">
+                <div class="cert-icon"><i class="fa-solid fa-shield-check"></i></div>
+                <div>
+                  <h4>Neural Networks and Deep Learning</h4>
+                  <p class="cert-org">DeepLearning.AI</p>
+                </div>
+              </div>
+
+              <div class="cert-item glass-panel">
+                <div class="cert-icon"><i class="fa-solid fa-shield-check"></i></div>
+                <div>
+                  <h4>Supervised Learning with scikit-learn</h4>
+                  <p class="cert-org">DataCamp</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Languages Column -->
+          <div>
+            <div class="section-header">
+              <span class="section-badge">Communication</span>
+              <h2 class="section-title">Languages</h2>
+            </div>
+
+            <div class="languages-box glass-panel">
+              <div class="lang-card">
+                <div class="lang-info">
+                  <div class="lang-name">English</div>
+                  <div class="lang-level">C1 · Full Professional Proficiency</div>
+                </div>
+                <div class="lang-bar-bg"><div class="lang-bar-fill" style="width: 95%;"></div></div>
+              </div>
+
+              <div class="lang-card">
+                <div class="lang-info">
+                  <div class="lang-name">German</div>
+                  <div class="lang-level">B1 · Intermediate Professional</div>
+                </div>
+                <div class="lang-bar-bg"><div class="lang-bar-fill" style="width: 65%;"></div></div>
+              </div>
+
+              <div class="lang-card">
+                <div class="lang-info">
+                  <div class="lang-name">Turkish</div>
+                  <div class="lang-level">Native Speaker</div>
+                </div>
+                <div class="lang-bar-bg"><div class="lang-bar-fill" style="width: 100%;"></div></div>
+              </div>
+            </div>
+
+            <!-- Quick Contact Box inside Right Column -->
+            <div class="cta-banner glass-panel">
+              <h3>Let's build impactful data platforms together.</h3>
+              <p>Looking for a BI & Analytics Engineer or Applied AI Specialist in Munich or Remote EU?</p>
+              <a href="mailto:turantoprakbilge@gmail.com" class="btn btn-primary btn-block">
+                <i class="fa-solid fa-paper-plane"></i> Send Direct Email
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">Get In Touch</span>
+          <h2 class="section-title">Contact & Socials</h2>
+          <p class="section-subtitle">Feel free to reach out for career opportunities, consulting, or technical collaborations.</p>
+        </div>
+
+        <div class="contact-cards-grid">
+          <a href="mailto:turantoprakbilge@gmail.com" class="contact-card glass-panel">
+            <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="contact-card-title">Email</div>
+            <div class="contact-card-val">turantoprakbilge@gmail.com</div>
+          </a>
+
+          <a href="tel:+4915752841577" class="contact-card glass-panel">
+            <div class="contact-card-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="contact-card-title">Phone</div>
+            <div class="contact-card-val">+49 157 5284 1577</div>
+          </a>
+
+          <a href="https://linkedin.com/in/ToprakBilge" target="_blank" rel="noopener noreferrer" class="contact-card glass-panel">
+            <div class="contact-card-icon"><i class="fa-brands fa-linkedin"></i></div>
+            <div class="contact-card-title">LinkedIn</div>
+            <div class="contact-card-val">linkedin.com/in/ToprakBilge</div>
+          </a>
+
+          <div class="contact-card glass-panel">
+            <div class="contact-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="contact-card-title">Location</div>
+            <div class="contact-card-val">Munich, Bavaria, Germany</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-copy">
+        &copy; <span id="year"></span> Toprak Bilge. All rights reserved.
+      </div>
+      <div class="footer-links">
+        <a href="#hero">Back to Top <i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification for Copy Actions -->
+  <div id="toast" class="toast">Copied to clipboard!</div>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+</body>
+</html>
