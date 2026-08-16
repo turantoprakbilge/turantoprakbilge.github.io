@@ -768,10 +768,9 @@ body.light-theme .navbar {
   box-shadow: 0 4px 12px rgba(0, 242, 254, 0.15);
 }
 .trust-item img {
-  width: 22px;
   height: 22px;
-  min-width: 22px;
-  max-width: 22px;
+  width: auto;
+  max-width: 40px;
   flex-shrink: 0;
   object-fit: contain;
   border-radius: 4px;
