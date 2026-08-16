@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Official PyTorch Flame & Orbit Mark -->
+  <path fill="#EE4C2C" d="M52,10 C50,15 45,21 41,27 C34,36 30,46 30,58 C30,73 41,85 56,86 C71,87 83,76 83,61 C83,49 76,40 68,33 C67,39 63,44 57,46 C54,47 50,47 48,44 C45,40 46,34 50,30 C53,27 55,20 52,10 Z"/>
+  <circle cx="68" cy="22" r="4.5" fill="#EE4C2C"/>
+</svg>

@@ -1040,6 +1040,20 @@ body.light-theme .navbar {
   font-size: 1.4rem;
   color: var(--accent-cyan);
   margin-bottom: 0.8rem;
+  transition: all var(--transition-fast);
+}
+.skill-icon img {
+  width: 26px;
+  height: 26px;
+  max-width: 26px;
+  max-height: 26px;
+  object-fit: contain;
+  display: block;
+}
+.skill-card:hover .skill-icon {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--accent-cyan);
+  transform: scale(1.08);
 }
 .skill-name {
   font-weight: 600;

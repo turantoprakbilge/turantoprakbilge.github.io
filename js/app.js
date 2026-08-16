@@ -188,14 +188,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 9. Dynamic Ambient Background Logo Cross-Fade & Location Cycler
   const brandLogos = [
+    // Top Enterprise Brands & Universities
     'assets/logos/allianz.svg?v=6',
     'assets/logos/amazon.svg?v=6',
     'assets/logos/tum.svg?v=6',
     'assets/logos/siemens.svg?v=6',
     'assets/logos/bayer.svg?v=6',
     'assets/logos/sabancidx.svg?v=6',
-    'assets/logos/databricks.svg?v=6',
-    'assets/logos/bilkent.svg?v=6'
+    'assets/logos/bilkent.svg?v=6',
+    
+    // Core Engineering & Applied AI Stack
+    'assets/logos/python.svg',
+    'assets/logos/spark.svg',
+    'assets/logos/databricks.svg',
+    'assets/logos/azure.svg',
+    'assets/logos/powerbi.svg',
+    'assets/logos/docker.svg',
+    'assets/logos/pytorch.svg',
+    'assets/logos/deltalake.svg',
+    'assets/logos/git.svg',
+    'assets/logos/openai.svg',
+    'assets/logos/postgresql.svg',
+    'assets/logos/fastapi.svg',
+    'assets/logos/aws.svg'
   ];
 
   // Dynamic screen coordinates where logos spawn and drift
