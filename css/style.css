@@ -137,7 +137,7 @@ ul {
 }
 
 /* ==========================================================================
-   Ambient Floating Background Logos (Fade In/Out & Organic Drift)
+   Dynamic Ambient Floating Brand Badges (Clear, Vibrant, Smooth Floating)
    ========================================================================== */
 .ambient-logo-bg {
   position: fixed;
@@ -146,55 +146,67 @@ ul {
   height: 100vh;
   overflow: hidden;
   pointer-events: none;
-  z-index: -1;
+  z-index: 0;
 }
-.ambient-logo {
+.ambient-badge {
   position: absolute;
   top: var(--top, 50%);
   left: var(--left, auto);
   right: var(--right, auto);
-  width: var(--size, 80px);
-  max-width: var(--size, 80px);
-  opacity: 0.045;
-  filter: grayscale(85%) contrast(1.1);
+  width: var(--size, 75px);
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  opacity: 0.22;
   transform: translate3d(0, 0, 0);
-  animation: ambientLogoFloat var(--duration, 22s) ease-in-out infinite alternate;
+  animation: ambientBadgeFloat var(--duration, 10s) ease-in-out infinite alternate;
   animation-delay: var(--delay, 0s);
   will-change: transform, opacity;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   pointer-events: none;
   user-select: none;
+  transition: opacity 0.5s ease;
 }
-.ambient-logo img {
+.ambient-badge img {
   width: 100%;
   height: auto;
+  max-height: 42px;
   display: block;
   object-fit: contain;
 }
-@keyframes ambientLogoFloat {
+@keyframes ambientBadgeFloat {
   0% {
-    opacity: 0.02;
-    transform: translateY(0px) rotate(0deg) scale(0.94);
+    opacity: 0.14;
+    transform: translateY(0px) rotate(0deg) scale(0.96);
   }
   50% {
-    opacity: 0.065;
-    transform: translateY(-26px) rotate(5deg) scale(1.04);
+    opacity: 0.28;
+    transform: translateY(-22px) rotate(3deg) scale(1.04);
+    box-shadow: 0 16px 36px rgba(0, 242, 254, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.18);
   }
   100% {
-    opacity: 0.025;
-    transform: translateY(18px) rotate(-4deg) scale(0.96);
+    opacity: 0.16;
+    transform: translateY(14px) rotate(-2.5deg) scale(0.98);
   }
 }
-body.light-theme .ambient-logo {
-  opacity: 0.035;
-  filter: grayscale(90%);
+body.light-theme .ambient-badge {
+  background: rgba(0, 0, 0, 0.035);
+  border-color: rgba(0, 0, 0, 0.09);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  opacity: 0.2;
 }
-@media (max-width: 768px) {
-  .ambient-logo {
-    width: calc(var(--size, 80px) * 0.7);
-    max-width: calc(var(--size, 80px) * 0.7);
-    opacity: 0.03;
+@media (max-width: 992px) {
+  .ambient-badge {
+    width: calc(var(--size, 75px) * 0.75);
+    opacity: 0.16;
   }
-  .ambient-logo:nth-child(even) {
+  .ambient-badge:nth-child(even) {
     display: none;
   }
 }
